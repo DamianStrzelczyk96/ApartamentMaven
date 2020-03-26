@@ -2,7 +2,7 @@ import lombok.Data;
 
 
 @Data
-public class Apartament  {
+public class Apartament extends Budynek  {
 
 
 
