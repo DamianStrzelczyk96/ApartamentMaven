@@ -17,7 +17,7 @@ public class Main {
         gdansk.setPowierzchnia(200);
         gdansk.setMiasto("Gdańsk");
 
-        ArrayList mieszkania = new ArrayList();
+        ArrayList<Apartament> mieszkania = new ArrayList();
         mieszkania.add(warszawa);
         mieszkania.add(krwakow);
         mieszkania.add(gdansk);
@@ -29,8 +29,14 @@ public class Main {
         System.out.println(krwakow.getCena());
         krwakow.getFullPrice();
 
+        double srednia = (warszawa.cena+gdansk.cena+krwakow.cena)/mieszkania.size();
+        System.out.println(srednia);
+        System.out.format("%.2f%n", srednia);
+        double suma = 0;
+        suma += mieszkania.stream().mapToDouble(Apartament -> Apartament.cena).sum();
+        double srednia2 = suma/mieszkania.size();
+        System.out.format("%.2f%n", srednia2);
 
         }
-
 
 }

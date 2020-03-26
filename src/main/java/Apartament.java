@@ -2,12 +2,13 @@ import lombok.Data;
 
 
 @Data
-public class Apartament {
+public class Apartament  {
 
 
-    private String miasto;
-    private double powierzchnia;
-    public double cena;
+
+    String miasto;
+   double powierzchnia;
+   double cena;
 
 //    public Apartament(String miasto,double powierzchnia,double cena){
 //        this.miasto=miasto;
@@ -19,4 +20,15 @@ public class Apartament {
         System.out.println(cena);
     }
 
+    public String miasto() {
+        return null;
+    }
+
+    public double powierzchnia() {
+        return 0;
+    }
+
+    public double cena() {
+        return 0;
+    }
 }
